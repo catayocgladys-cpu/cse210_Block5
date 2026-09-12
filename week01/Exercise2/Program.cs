@@ -1,3 +1,6 @@
+//This is Exercise 2 from Week 1 of the C# Programming course
+//If statements and Boolean Logic
+// Gladys Catayoc
 using System;
 
 class Program

@@ -1,3 +1,7 @@
+//This is Exercise 3 from Week 1 of the C# Programming course
+// GUESS MY NUMBER GAME
+//Gladys Catayoc
+
 using System;
 
 class Program

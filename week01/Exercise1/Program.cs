@@ -1,3 +1,6 @@
+//This is Exercise 1 from Week 1 of the C# Programming course
+//Input and Output
+//Gladys Catayoc
 using System;
 
 class Program
