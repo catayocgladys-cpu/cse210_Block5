@@ -1,5 +1,6 @@
 //This Program.cs is where the program starts. It creates a Journal object, adds Entry objects to it, and displays the entries.
 //This is week 2 on Journal. In this assignment, you will create a Journal class that manages all of the user's journal entries. The Journal class will have a list of Entry objects and methods to add, display, save, and load entries. You will then create a Journal object, add Entry objects to it, and display the entries.
+
 //Gladys Catayoc
 
 // CREATIVITY / EXCEEDING REQUIREMENTS:
