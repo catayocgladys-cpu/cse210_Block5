@@ -8,8 +8,7 @@ class Program
     {
         // Creativity feature:
         // I added a progress message that shows how many
-        // words are still visible after each round.
-        // This helps the user track their progress.
+        // words are still visible.
 
         Reference reference = new Reference("D&C", 20, 37);
 
@@ -17,28 +16,32 @@ class Program
 
         Scripture scripture = new Scripture(reference, text);
 
-        // Keep going until all the words are hidden
-        while (!scripture.IsCompletelyHidden())
+        while (true)
         {
+            // Clear the screen before displaying the scripture
             Console.Clear();
 
             // Display the scripture
             Console.WriteLine(scripture.GetDisplayText());
 
+            // Stop when all words are hidden
+            if (scripture.IsCompletelyHidden())
+            {
+                Console.WriteLine();
+                Console.WriteLine("Great job! You finished memorizing the scripture.");
+                break;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine($"Words remaining: {scripture.GetVisibleWordCount()}");
             Console.WriteLine();
 
-            // Show progress
-            Console.WriteLine(
-                $"Words remaining: {scripture.GetVisibleWordCount()}");
-
-            Console.WriteLine();
-
-            // Ask the user what they want to do
+            // Ask the user what to do
             Console.Write("Press Enter to hide words or type 'quit' to exit: ");
 
             string input = Console.ReadLine();
 
-            // Exit if the user types quit
+            // Quit the program
             if (input.ToLower() == "quit")
             {
                 break;
@@ -46,21 +49,6 @@ class Program
 
             // Hide 3 random words
             scripture.HideRandomWords();
-        }
-
-        // Show the final scripture
-        Console.Clear();
-        Console.WriteLine(scripture.GetDisplayText());
-
-        Console.WriteLine();
-
-        if (scripture.IsCompletelyHidden())
-        {
-            Console.WriteLine("Great job! You finished memorizing the scripture.");
-        }
-        else
-        {
-            Console.WriteLine("Good job! Keep practicing the scripture.");
         }
     }
 }
