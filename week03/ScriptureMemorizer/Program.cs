@@ -1,13 +1,13 @@
-//This runs the program
-//Gladys Catayoc
-using System;
+// Scripture Memorizer
+// Gladys Catayoc
+
 
 class Program
 {
     static void Main(string[] args)
     {
         // Creativity feature:
-        // I added a progress message that shows how many
+        // I added a progress message to show how many
         // words are still visible.
 
         Reference reference = new Reference("D&C", 20, 37);
@@ -16,39 +16,49 @@ class Program
 
         Scripture scripture = new Scripture(reference, text);
 
-        while (true)
+        // Keep showing the scripture until all words are hidden
+        while (!scripture.IsCompletelyHidden())
         {
-            // Clear the screen before displaying the scripture
             Console.Clear();
 
             // Display the scripture
             Console.WriteLine(scripture.GetDisplayText());
 
-            // Stop when all words are hidden
-            if (scripture.IsCompletelyHidden())
-            {
-                Console.WriteLine();
-                Console.WriteLine("Great job! You finished memorizing the scripture.");
-                break;
-            }
-
             Console.WriteLine();
-            Console.WriteLine($"Words remaining: {scripture.GetVisibleWordCount()}");
+            Console.WriteLine("Words remaining: " + scripture.GetVisibleWordCount());
             Console.WriteLine();
 
-            // Ask the user what to do
-            Console.Write("Press Enter to hide words or type 'quit' to exit: ");
+            Console.WriteLine("Press ENTER to hide 3 words.");
+            Console.WriteLine("Press Q to quit.");
 
-            string input = Console.ReadLine();
+            // Wait for the user to press a key
+            ConsoleKeyInfo key = Console.ReadKey(true);
 
-            // Quit the program
-            if (input.ToLower() == "quit")
+            // Quit if Q is pressed
+            if (key.Key == ConsoleKey.Q)
             {
                 break;
             }
 
-            // Hide 3 random words
-            scripture.HideRandomWords();
+            // Hide 3 words only when ENTER is pressed
+            if (key.Key == ConsoleKey.Enter)
+            {
+                scripture.HideRandomWords();
+            }
+        }
+
+        // Show the final scripture
+        Console.Clear();
+        Console.WriteLine(scripture.GetDisplayText());
+        Console.WriteLine();
+
+        if (scripture.IsCompletelyHidden())
+        {
+            Console.WriteLine("Great job! You finished memorizing the scripture.");
+        }
+        else
+        {
+            Console.WriteLine("Keep practicing the scripture!");
         }
     }
 }

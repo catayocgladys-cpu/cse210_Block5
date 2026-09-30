@@ -1,0 +1,1 @@
+//Stores the commenter's name and comment text.
