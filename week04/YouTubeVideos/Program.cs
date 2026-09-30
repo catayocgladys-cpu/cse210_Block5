@@ -9,7 +9,7 @@ class Program
     static void Main(string[] args)
     {
         //Create the first video
-        Video video1 = new Video("Learning C#", "Code Academy", 300);
+        Video video1 = new("Learning C#", "Code Academy", 300);
 
         //Add comments to the first video
         video1.AddComment(new Comment("Alice", "Great tutorial!"));
@@ -18,7 +18,7 @@ class Program
         video1.AddComment(new Comment("Diana", "Could you make more videos like this?"));
 
         //Create the second video
-        Video video2 = new Video("Healthy Cooking Tips", "Chef John", 600);
+        Video video2 = new("Healthy Cooking Tips", "Chef John", 600);
 
         //Add comments to the second video
         video2.AddComment(new Comment("Eve", "These tips are really useful!"));
@@ -27,7 +27,7 @@ class Program
         video2.AddComment(new Comment("Henry", "Can you make a video on dessert recipes?"));
 
         //Create the third video
-        Video video3 = new Video("Beautiful Places to Visit", "Travel Enthusiast", 450);
+        Video video3 = new("Beautiful Places to Visit", "Travel Enthusiast", 450);
 
         //Add comments to the third video
         video3.AddComment(new Comment("Ivy", "I want to visit all these places!"));
@@ -36,7 +36,7 @@ class Program
         video3.AddComment(new Comment("Leo", "I love the cinematography in this video."));
 
         //Put all videos in a list
-        List<Video> videos = new List<Video>();
+        List<Video> videos = new();
         videos.Add(video1);
         videos.Add(video2);
         videos.Add(video3);
