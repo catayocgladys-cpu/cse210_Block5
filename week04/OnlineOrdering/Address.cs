@@ -18,7 +18,7 @@ namespace OnlineOrdering
             _country = county;
 
         }
-        public book IsInUSA()
+        public bool IsInUSA()
         {
             return _country.Trim().Equals("USA", System.StringComparison.OrdinalIgnoreCase);
         }
