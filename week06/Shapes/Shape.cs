@@ -1,4 +1,4 @@
-//base class 
+//parent class
 
 public class Shape
 {
