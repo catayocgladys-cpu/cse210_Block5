@@ -14,7 +14,7 @@ class Program
             Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Start Breathing Activity");
             Console.WriteLine("2. Start Reflection Activity");
-            Console.WriteLine("3. Start Listening Activity");
+            Console.WriteLine("3. Start Listing Activity");
             Console.WriteLine("4. Quit");
             Console.Write("Select a choice from the menu: ");
 
@@ -32,7 +32,7 @@ class Program
             }
             else if (choice == "3")
             {
-                ListeningActivity activity = new ListeningActivity();
+                ListingActivity activity = new ListingActivity();
                 activity.Run();
             }
             else if (choice == "4")

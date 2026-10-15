@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-public class ListeningActivity : Activity
+public class ListingActivity : Activity
 {
     private List<string> _prompts;
     private List<string> _items;
 
-    public ListeningActivity()
-        : base("Listening Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.", 0)
+    public ListingActivity()
+        : base("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.", 0)
     {
         _prompts = new List<string>
         {
