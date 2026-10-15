@@ -1,0 +1,4 @@
+Score|0
+Simple|Finish Homeword|Do it, now!|100|False
+Eternal|Read the scriptures with the kids daily|Read and learn together|50
+Checklist|Attend the temple April 2027|Go to the temple|50|6|100|0
